@@ -151,26 +151,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 7. ИНТЕРАКТИВНЫЙ 4 БЛОК («НЕ ПРОСТО ПРАВИЛА, А СТИЛЬ ЖИЗНИ»)
   const lifestyleData = [
-    {
-      img: "img/dinner.png",
-      tag: "пятничный мезе-клуб • 20:00",
-      caption: "Живое общение с носителями за виртуальным столом: обсуждаем культуру, учимся спорить и заказывать ужин в таверне."
-    },
-    {
-      img: "img/acropolis.png",
-      tag: "выездной ретрит • крит & киклады",
-      caption: "7 дней полного погружения в Греции: утренние уроки на террасе с видом на море, локальные рынки и практика 24/7."
-    },
-    {
-      img: "img/music.png",
-      tag: "кино и музыка • без субтитров",
-      caption: "Разбираем греческий кинематограф и современные треки — начинаем понимать живой сленг, идиомы и юмор местных."
-    }
+    { img: "img/dinner.png" },
+    { img: "img/acropolis.png" },
+    { img: "img/music.png" }
   ];
 
   const stageImg = document.getElementById("lifestyleStageImg");
-  const stageTag = document.getElementById("lifestyleStageTag");
-  const stageCaption = document.getElementById("lifestyleStageCaption");
   const tabs = document.querySelectorAll(".lifestyle-tab");
   const thumbs = document.querySelectorAll(".lifestyle-thumb");
 
@@ -181,17 +167,15 @@ document.addEventListener("DOMContentLoaded", () => {
     tabs.forEach((t, i) => t.classList.toggle("is-active", i === index));
     thumbs.forEach((th, i) => th.classList.toggle("is-active", i === index));
 
-    gsap.to([stageImg, stageTag, stageCaption], {
+    gsap.to(stageImg, {
       autoAlpha: 0,
-      y: 8,
+      scale: 0.98,
       duration: 0.2,
       onComplete: () => {
         stageImg.src = item.img;
-        stageTag.textContent = item.tag;
-        stageCaption.textContent = item.caption;
-        gsap.to([stageImg, stageTag, stageCaption], {
+        gsap.to(stageImg, {
           autoAlpha: 1,
-          y: 0,
+          scale: 1,
           duration: 0.35,
           ease: "power2.out"
         });
