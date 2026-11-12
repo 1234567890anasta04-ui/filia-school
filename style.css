@@ -531,7 +531,7 @@ body {
   opacity: 0.85;
 }
 
-/* 4. НЕ ПРОСТО ПРАВИЛА, А СТИЛЬ ЖИЗНИ */
+/* 4. НЕ ПРОСТО ПРАВИЛА, А СТИЛЬ ЖИЗНИ (БЕЗ ПЛАШКИ НА ФОТО) */
 .section-dark--lifestyle {
   background:
     radial-gradient(circle at 78% 42%, rgba(255, 138, 101, 0.28), transparent 52%),
@@ -649,35 +649,6 @@ body {
   height: 440px;
   object-fit: cover;
   display: block;
-}
-
-.lifestyle-stage__glass {
-  position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
-  background: rgba(24, 18, 15, 0.78);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(243, 209, 190, 0.22);
-  border-radius: 20px;
-  padding: 18px 22px;
-  color: var(--text-light);
-}
-
-.lifestyle-stage__tag {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--peach-warm);
-  margin-bottom: 6px;
-}
-
-.lifestyle-stage__glass p {
-  font-size: 14px;
-  line-height: 1.45;
-  opacity: 0.92;
 }
 
 .lifestyle-thumbs {
