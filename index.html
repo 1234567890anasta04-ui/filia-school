@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>filía — онлайн-школа греческого языка и культуры</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. HERO ЭКРАН -->
+  <header class="hero gsap-hero-section">
+    <div class="hero__bg gsap-hero-bg"></div>
+
+    <nav class="header container gsap-header">
+      <a href="#" class="logo">filía</a>
+      <div class="nav-pill">
+        <a href="#about">о школе</a>
+        <a href="#formats">форматы</a>
+        <a href="#teachers">преподаватели</a>
+        <a href="#lifestyle">атмосфера</a>
+        <a href="#faq">вопросы</a>
+      </div>
+      <a href="#quiz" class="btn btn--light gsap-btn">пробный урок</a>
+    </nav>
+
+    <div class="hero__center container">
+      <h1 class="hero__title gsap-hero-logo">filía</h1>
+      <p class="hero__subtitle gsap-hero-sub">онлайн-школа греческого языка и культуры:<br>живое общение без зубрёжки</p>
+      <a href="#formats" class="btn btn--dark gsap-btn gsap-hero-sub">
+        <span>подобрать программу</span>
+        <svg class="icon-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="hero__bottom container">
+      <p class="hero__slogan hero__slogan--left gsap-hero-slogan">учим греческий .</p>
+      <p class="hero__slogan hero__slogan--right gsap-hero-slogan">учим жить по-гречески .</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- ЗАДАЧИ И МАНИФЕСТ -->
+    <section id="about" class="section-light">
+      <div class="container about-grid">
+        <div class="tasks-card">
+          <h2 class="tasks-card__title gsap-title">язык на уровне носителя для любых задач</h2>
+          <div class="pills-wrap gsap-pills-container">
+            <span class="pill pill--dark gsap-pill">переезд в Грецию</span>
+            <span class="pill pill--peach gsap-pill">путешествия без барьеров</span>
+            <span class="pill pill--outline gsap-pill">учёба в вузах</span>
+            <span class="pill pill--peach gsap-pill">работа и бизнес</span>
+            <span class="pill pill--outline gsap-pill">экзамен на ВНЖ</span>
+            <span class="pill pill--dark gsap-pill">для души и культуры</span>
+            <span class="pill pill--outline gsap-pill">греческие корни</span>
+            <span class="pill pill--peach gsap-pill">чтение в оригинале</span>
+            <span class="pill pill--dark gsap-pill">свободный разговорный</span>
+          </div>
+        </div>
+
+        <div class="manifest-card gsap-manifest-card">
+          <h3><span class="manifest-logo">filía</span> — больше, чем просто школа</h3>
+          <p>Мы не заставляем учить мёртвые правила из учебников 90-х. С первого занятия вы погружаетесь в контекст современной Греции: от заказа фраппе в Афинах до понимания кино и юмора местных.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ФОРМАТЫ ОБУЧЕНИЯ И БЫСТРЫЙ ТЕСТ -->
+    <section id="formats" class="section-dark">
+      <div class="container formats-layout">
+        <div class="formats-info">
+          <h2 class="section-title section-title--light gsap-title">форматы<br>обучения</h2>
+          <p class="formats-info__text">Выберите ритм, который впишется в ваш график. Все программы включают доступ к закрытому разговорному клубу.</p>
+          <p class="formats-info__text">Занимаемся на интерактивной платформе без скучных распечаток и зубрёжки.</p>
+          <a href="#quiz" class="btn btn--peach formats-info__btn gsap-btn">
+            <span>подобрать формат за 1 минуту</span>
+            <svg class="icon-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="formats-grid gsap-formats-grid">
+          <article class="format-card gsap-format-card">
+            <div>
+              <span class="format-card__tag">индивидуально</span>
+              <h3>один на один</h3>
+              <ul>
+                <li>Персональная программа под вашу цель</li>
+                <li>Гибкий график переноса занятий</li>
+                <li>Максимум разговорной практики</li>
+              </ul>
+            </div>
+            <a href="#quiz" class="btn btn--dark btn--full gsap-btn">
+              <span>подробнее</span>
+              <svg class="icon-arrow" width="15" height="15" viewBox="0 0 16 16" fill="none">
+                <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="format-card format-card--featured gsap-format-card">
+            <div>
+              <span class="format-card__tag">хит школы</span>
+              <h3>вместе с группой</h3>
+              <ul>
+                <li>Мини-группы до 5 человек одного уровня</li>
+                <li>Живые диалоги и дебаты с первого урока</li>
+                <li>Поддержка куратора в чате 24/7</li>
+              </ul>
+            </div>
+            <a href="#quiz" class="btn btn--light btn--full gsap-btn">
+              <span>подробнее</span>
+              <svg class="icon-arrow" width="15" height="15" viewBox="0 0 16 16" fill="none">
+                <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="format-card gsap-format-card">
+            <div>
+              <span class="format-card__tag">интенсив</span>
+              <h3>разговорный клуб</h3>
+              <ul>
+                <li>Еженедельные встречи с носителями</li>
+                <li>Разбор фильмов, песен и сленга</li>
+                <li>Снятие языкового барьера</li>
+              </ul>
+            </div>
+            <a href="#quiz" class="btn btn--dark btn--full gsap-btn">
+              <span>подробнее</span>
+              <svg class="icon-arrow" width="15" height="15" viewBox="0 0 16 16" fill="none">
+                <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </article>
+        </div>
+      </div>
+
+      <!-- БЫСТРЫЙ ТЕСТ -->
+      <div id="quiz" class="container">
+        <div class="quiz-box gsap-quiz-box">
+          <h2 class="quiz-box__title">быстрый тест: какой формат мне подходит?</h2>
+          <form class="quiz-form" id="quizForm">
+            <div class="quiz-field">
+              <label for="level">Ваш текущий уровень</label>
+              <select id="level" name="level">
+                <option value="zero">С нуля (не знаю алфавит)</option>
+                <option value="basic">Начальный (A1–A2)</option>
+                <option value="mid">Средний (B1–B2)</option>
+              </select>
+            </div>
+            <div class="quiz-field">
+              <label for="goal">Главная цель</label>
+              <select id="goal" name="goal">
+                <option value="vnj">Переезд / экзамен на ВНЖ</option>
+                <option value="travel">Путешествия и общение</option>
+                <option value="soul">Для души и культуры</option>
+              </select>
+            </div>
+            <div class="quiz-field">
+              <label for="time">Сколько времени готовы уделять</label>
+              <select id="time" name="time">
+                <option value="standard">2 раза в неделю по 60 мин</option>
+                <option value="fast">3+ раза в неделю (интенсив)</option>
+                <option value="weekend">Только по выходным</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn--dark gsap-btn">
+              <span>получить ответ и записаться на бесплатное пробное занятие</span>
+              <svg class="icon-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+          <div id="quizResult" class="quiz-result" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ПРЕПОДАВАТЕЛИ & НОСИТЕЛИ -->
+    <section id="teachers" class="section-light gsap-teachers-section">
+      <div class="container">
+        <div class="teachers-header">
+          <div class="teachers-header__left">
+            <h2 class="section-title gsap-title">преподаватели<br>& носители</h2>
+            <div class="teachers-badges">
+              <span class="pill pill--peach">100% носители и билингвы</span>
+              <span class="pill pill--peach">C2 / ВАК академическая база</span>
+              <span class="pill pill--terracotta">> 7 лет средний опыт кураторов</span>
+            </div>
+          </div>
+          <img src="img/greece-map.png" alt="Карта Греции" class="teachers-map gsap-greece-map">
+        </div>
+
+        <div class="teachers-grid gsap-teachers-grid">
+          <article class="teacher-card gsap-teacher-card">
+            <div class="teacher-card__body">
+              <img src="img/nikos.png" alt="Никос" class="teacher-card__photo teacher-card__photo--nikos">
+              <span class="teacher-card__city">Αθήνα / Афины</span>
+              <h3>Nikos / Никос</h3>
+              <p>Носитель языка, филолог Афинского университета. Поможет освоить живые идиомы и начать говорить без акцента.</p>
+            </div>
+            <button type="button" class="btn btn--dark btn--audio gsap-btn">▶ послушать голос</button>
+          </article>
+
+          <article class="teacher-card gsap-teacher-card">
+            <div class="teacher-card__body">
+              <img src="img/elena.png" alt="Елена" class="teacher-card__photo">
+              <span class="teacher-card__city">Θεσσαλονίκη / Салоники</span>
+              <h3>Elena / Елена</h3>
+              <p>Специалист по подготовке к сдаче экзаменов на ВНЖ и разговорной практике. Преподаёт более 7 лет.</p>
+            </div>
+            <button type="button" class="btn btn--dark btn--audio gsap-btn">▶ послушать голос</button>
+          </article>
+
+          <article class="teacher-card gsap-teacher-card">
+            <div class="teacher-card__body">
+              <img src="img/sofia.png" alt="София" class="teacher-card__photo">
+              <span class="teacher-card__city">Κρήτη / Крит</span>
+              <h3>Sofia / София</h3>
+              <p>Эксперт по греческой культуре и истории. Разрушит языковой барьер с первого занятия через погружение в контекст.</p>
+            </div>
+            <button type="button" class="btn btn--dark btn--audio gsap-btn">▶ послушать голос</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. НЕ ПРОСТО ПРАВИЛА, А СТИЛЬ ЖИЗНИ -->
+    <section id="lifestyle" class="section-dark section-dark--lifestyle gsap-lifestyle-section">
+      <div class="container lifestyle-grid">
+        <div class="lifestyle-content">
+          <span class="lifestyle-badge">✦ комьюнити & лайфстайл</span>
+          <h2 class="section-title section-title--light gsap-title">не просто правила,<br>а стиль жизни</h2>
+          <p class="lifestyle-lead">Учим язык так, как на нём говорят в афинских кофейнях и тавернах у моря — легко, эмоционально и в кругу своих.</p>
+
+          <div class="lifestyle-tabs" role="tablist">
+            <button type="button" class="lifestyle-tab is-active gsap-lifestyle-item" data-index="0">
+              <span class="lifestyle-tab__num">01</span>
+              <div class="lifestyle-tab__text">
+                <strong>Разговорные клубы по пятницам</strong>
+                <span>с греческим вином, мезедес и носителями</span>
+              </div>
+            </button>
+
+            <button type="button" class="lifestyle-tab gsap-lifestyle-item" data-index="1">
+              <span class="lifestyle-tab__num">02</span>
+              <div class="lifestyle-tab__text">
+                <strong>Ежегодные выезды на острова</strong>
+                <span>7 дней практики на Крите или Санторини</span>
+              </div>
+            </button>
+
+            <button type="button" class="lifestyle-tab gsap-lifestyle-item" data-index="2">
+              <span class="lifestyle-tab__num">03</span>
+              <div class="lifestyle-tab__text">
+                <strong>Разборы музыки и кинопоказы</strong>
+                <span>учимся понимать живой сленг и местный юмор</span>
+              </div>
+            </button>
+          </div>
+
+          <button type="button" id="openClubModal" class="btn btn--provocative gsap-btn">
+            <span>посмотреть программу клуба</span>
+            <svg class="icon-arrow" width="18" height="18" viewBox="0 0 16 16" fill="none">
+              <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="lifestyle-stage gsap-lifestyle-main">
+          <div class="lifestyle-stage__frame">
+            <img src="img/dinner.png" alt="Атмосфера клуба filía" id="lifestyleStageImg" class="lifestyle-stage__img">
+            <div class="lifestyle-stage__glass">
+              <span class="lifestyle-stage__tag" id="lifestyleStageTag">пятничный мезе-клуб • 20:00</span>
+              <p id="lifestyleStageCaption">Живое общение с носителями за виртуальным столом: обсуждаем культуру, учимся спорить и заказывать ужин в таверне.</p>
+            </div>
+          </div>
+
+          <div class="lifestyle-thumbs">
+            <button type="button" class="lifestyle-thumb is-active" data-index="0" aria-label="Кадр 1">
+              <img src="img/dinner.png" alt="Ужин у моря">
+            </button>
+            <button type="button" class="lifestyle-thumb" data-index="1" aria-label="Кадр 2">
+              <img src="img/acropolis.png" alt="Вид на Акрополь">
+            </button>
+            <button type="button" class="lifestyle-thumb" data-index="2" aria-label="Кадр 3">
+              <img src="img/music.png" alt="Греческие улочки">
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ЧАСТЫЕ ВОПРОСЫ (FAQ) -->
+    <section id="faq" class="section-light">
+      <div class="container faq-wrap">
+        <h2 class="section-title gsap-title">частые вопросы</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" class="faq-question">Смогу ли я заговорить, если никогда не учил греческий? <span>+</span></button>
+            <div class="faq-answer">
+              <p>Да. 70% каждого урока строится на живой речи. Уже на первом занятии вы научитесь читать вывески, знакомиться и заказывать кофе по-гречески.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question">Как проходят встречи пятничного разговорного клуба? <span>+</span></button>
+            <div class="faq-answer">
+              <p>Мы собираемся в Zoom в камерных группах по 5–6 человек вместе с носителем. Без скучных учебников — обсуждаем жизнь в Греции, кино, традиции и сленг.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question">Готовите ли вы к государственному экзамену на ВНЖ (Ελληνομάθεια)? <span>+</span></button>
+            <div class="faq-answer">
+              <p>Да, наши методисты готовят к уровням A2–B2 по актуальным требованиям Министерства образования Греции с разбором всех типовых заданий и аудирования.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. ПОЛНОЦЕННЫЙ АРХИТЕКТУРНЫЙ ФУТЕР -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#" class="logo logo--light">filía</a>
+          <p class="footer__desc">Онлайн-школа греческого языка, культуры и живого общения. Учим говорить красиво и чувствовать Грецию как дом.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Навигация</h4>
+          <ul>
+            <li><a href="#about">О школе и задачах</a></li>
+            <li><a href="#formats">Форматы обучения</a></li>
+            <li><a href="#teachers">Преподаватели</a></li>
+            <li><a href="#lifestyle">Разговорный клуб</a></li>
+            <li><a href="#faq">Частые вопросы</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Связь и комьюнити</h4>
+          <ul>
+            <li><a href="https://t.me/" target="_blank" rel="noopener">Telegram-канал школы</a></li>
+            <li><a href="mailto:hello@filia-school.ru">hello@filia-school.ru</a></li>
+            <li><span>Афины • Салоники • Онлайн</span></li>
+          </ul>
+        </div>
+
+        <div class="footer__cta">
+          <h4>Готовы начать?</h4>
+          <p>Запишитесь на бесплатный вводный урок-знакомство с куратором.</p>
+          <a href="#quiz" class="btn btn--peach gsap-btn">
+            <span>записаться на урок</span>
+            <svg class="icon-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 filía. Все права защищены.</span>
+        <div class="footer__legal">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Договор оферты</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО: ПРОГРАММА КЛУБА -->
+  <div class="modal-backdrop" id="clubModal" hidden>
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="closeClubModal" aria-label="Закрыть">✕</button>
+      <span class="pill pill--peach">комьюнити & лайфстайл</span>
+      <h3>Клуб filía: греческий вне учебников</h3>
+      <p class="modal-lead">Погружаемся в культуру, традиции и живую речь каждый месяц. Бесплатно для всех студентов школы.</p>
+      <div class="modal-grid">
+        <div class="modal-block">
+          <strong>01 / Пятничный мезе-клуб (20:00)</strong>
+          <p>Онлайн-встреча с носителем языка: учимся красиво спорить, заказывать ужин в таверне и понимать юмор местных.</p>
+        </div>
+        <div class="modal-block">
+          <strong>02 / Киновечер и разбор музыки</strong>
+          <p>Смотрим культовые греческие фильмы в оригинале и разбираем тексты песен от ребетики до инди-попа.</p>
+        </div>
+        <div class="modal-block">
+          <strong>03 / Культурный бранч с куратором</strong>
+          <p>Лекция-диалог о жизни в Греции: от тонкостей аренды жилья до выбора лучших островов для зимовки.</p>
+        </div>
+        <div class="modal-block">
+          <strong>04 / Выездной ретрит на острова</strong>
+          <p>7 дней полного погружения на Крите или Кикладах: утренний греческий на террасе и походы на рынки.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <span>Для гостей клуба: пробная встреча — <strong>1 200 ₽</strong></span>
+        <a href="#quiz" class="btn btn--dark gsap-btn" id="modalJoinBtn">записаться на встречу →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Библиотеки GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

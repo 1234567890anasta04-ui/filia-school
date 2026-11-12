@@ -1,0 +1,938 @@
+:root {
+  --bg-light: #F5F2EC;
+  --bg-dark: #1E1714;
+  --text-dark: #1E1714;
+  --text-light: #F5F2EC;
+  --peach-soft: #F3D1BE;
+  --peach-warm: #E8AE93;
+  --terracotta: #C86D51;
+  --sunset-glow: #FF7B54;
+  --radius-section: 36px;
+  --radius-card: 24px;
+  --radius-pill: 999px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* Кнопки и векторные стрелки */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  will-change: transform;
+  transition: background-color 0.25s ease, box-shadow 0.3s ease;
+}
+
+.icon-arrow {
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn:hover .icon-arrow {
+  transform: translateX(4px);
+}
+
+.btn--dark {
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.btn--light {
+  background: var(--bg-light);
+  color: var(--text-dark);
+}
+
+.btn--peach {
+  background: var(--peach-soft);
+  color: var(--text-dark);
+}
+
+.btn--peach:hover {
+  background: #f8dfd1;
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* Вызывающая кнопка в 4 блоке */
+.btn--provocative {
+  background: linear-gradient(135deg, #FF8E6E 0%, #D96443 100%);
+  color: #1A120F;
+  padding: 18px 36px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  box-shadow: 0 12px 35px rgba(255, 123, 84, 0.42), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+}
+
+.btn--provocative:hover {
+  box-shadow: 0 18px 45px rgba(255, 123, 84, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+/* 1. HERO (СОЧНЫЙ ЗАКАТ БЕЗ ЗАМЫЛИВАНИЯ) */
+.hero {
+  position: relative;
+  min-height: 94vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 0 52px;
+  color: var(--text-light);
+  border-bottom-left-radius: var(--radius-section);
+  border-bottom-right-radius: var(--radius-section);
+  overflow: hidden;
+  background-color: #261B17;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: -8% 0 0 0;
+  background: 
+    linear-gradient(180deg, rgba(226, 136, 109, 0.12) 0%, rgba(38, 27, 23, 0) 55%, rgba(24, 17, 14, 0.88) 100%),
+    url('img/hero-parthenon.png') center/cover no-repeat;
+  opacity: 1;
+  z-index: 0;
+}
+
+.header, .hero__center, .hero__bottom {
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+}
+
+.logo {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-dark);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.logo--light {
+  color: var(--text-light);
+}
+
+.nav-pill {
+  flex: 1;
+  max-width: 680px;
+  background: var(--bg-dark);
+  padding: 14px 36px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-pill a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.88;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.nav-pill a:hover {
+  opacity: 1;
+  color: var(--peach-soft);
+}
+
+.hero__center {
+  text-align: center;
+  margin: auto;
+  padding: 32px 0;
+}
+
+.hero__title {
+  font-size: clamp(76px, 11.5vw, 138px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--text-dark);
+  margin-bottom: 18px;
+}
+
+.hero__subtitle {
+  color: var(--text-dark);
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.hero__bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hero__slogan {
+  font-size: clamp(42px, 5.8vw, 72px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.hero__slogan--right {
+  align-self: flex-end;
+}
+
+/* ЗАДАЧИ И МАНИФЕСТ */
+.section-light {
+  padding: 96px 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+}
+
+.tasks-card {
+  background: #FFFFFF;
+  padding: 40px;
+  border-radius: var(--radius-card);
+}
+
+.tasks-card__title {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 20px;
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(200, 109, 81, 0.2);
+}
+
+.pill--dark { background: var(--bg-dark); color: var(--text-light); }
+.pill--peach { background: var(--peach-soft); color: var(--text-dark); }
+.pill--terracotta { background: var(--terracotta); color: #fff; }
+.pill--outline { border: 1.5px solid rgba(30, 23, 20, 0.28); color: var(--text-dark); }
+
+.manifest-card {
+  background: radial-gradient(circle at bottom right, #5B4337, var(--bg-dark) 70%);
+  color: var(--text-light);
+  padding: 44px;
+  border-radius: var(--radius-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.manifest-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.manifest-logo {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--peach-soft);
+  vertical-align: baseline;
+  margin-right: 4px;
+}
+
+.manifest-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* 2. ФОРМАТЫ ОБУЧЕНИЯ */
+.section-dark {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding: 96px 0;
+  border-radius: var(--radius-section);
+}
+
+.section-title {
+  font-size: clamp(38px, 4.6vw, 54px);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+}
+
+.formats-layout {
+  display: grid;
+  grid-template-columns: 1fr 2.15fr;
+  gap: 44px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.formats-info__text {
+  margin-top: 20px;
+  opacity: 0.78;
+  font-size: 15px;
+}
+
+.formats-info__btn {
+  margin-top: 28px;
+}
+
+.formats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.format-card {
+  background: linear-gradient(180deg, #F4CBB5 0%, #DF9B7C 65%, #2B201B 100%);
+  color: var(--text-dark);
+  padding: 30px 24px;
+  border-radius: var(--radius-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 390px;
+}
+
+.format-card--featured {
+  background: linear-gradient(180deg, #E88A6B 0%, #F5CBB5 70%, #362720 100%);
+  box-shadow: 0 20px 50px rgba(232, 138, 107, 0.18);
+}
+
+.format-card__tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.75;
+}
+
+.format-card h3 {
+  font-size: 22px;
+  line-height: 1.2;
+  min-height: 52px;
+  margin: 10px 0 16px;
+}
+
+.format-card ul {
+  list-style: none;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+/* КВИЗ (ЯРКИЙ ПЕРСИКОВО-КРЕМОВЫЙ ГРАДИЕНТ) */
+.quiz-box {
+  background: linear-gradient(135deg, #F8DFC9 0%, #EAA889 52%, #C97657 100%);
+  color: var(--text-dark);
+  padding: 44px 48px;
+  border-radius: var(--radius-card);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.25);
+}
+
+.quiz-box__title {
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.quiz-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.quiz-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+  opacity: 0.85;
+}
+
+.quiz-field select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 15px 42px 15px 20px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background-color: var(--bg-light);
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%231E1714' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  color: var(--text-dark);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-overflow: ellipsis;
+}
+
+.quiz-form button[type="submit"] {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin-top: 4px;
+  padding: 17px 32px;
+  font-size: 15px;
+}
+
+.quiz-result[hidden] {
+  display: none !important;
+}
+
+.quiz-result {
+  margin-top: 20px;
+  padding: 18px 24px;
+  background: rgba(30, 23, 20, 0.94);
+  color: var(--text-light);
+  border-radius: 18px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+/* 3. ПРЕПОДАВАТЕЛИ */
+.teachers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 44px;
+  position: relative;
+}
+
+.teachers-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+  max-width: 480px;
+}
+
+/* Увеличенная карта Греции */
+.teachers-map {
+  width: 580px;
+  max-width: 54%;
+  height: auto;
+  margin-right: -20px;
+  pointer-events: none;
+}
+
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.teacher-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.teacher-card__body {
+  background: linear-gradient(180deg, #FFFFFF 45%, #F2C9B2 100%);
+  border-radius: var(--radius-card);
+  padding: 14px 14px 24px;
+  width: 100%;
+  flex: 1;
+}
+
+.teacher-card__photo {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 16px;
+  margin-bottom: 14px;
+}
+
+.teacher-card__photo--nikos {
+  object-position: center 10%;
+}
+
+.teacher-card__city {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--terracotta);
+}
+
+.teacher-card h3 {
+  font-size: 19px;
+  margin: 4px 0 8px;
+}
+
+.teacher-card p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* 4. НЕ ПРОСТО ПРАВИЛА, А СТИЛЬ ЖИЗНИ */
+.section-dark--lifestyle {
+  background:
+    radial-gradient(circle at 78% 42%, rgba(255, 138, 101, 0.28), transparent 52%),
+    radial-gradient(circle at 15% 85%, rgba(200, 109, 81, 0.22), transparent 48%),
+    #18120F;
+  border: 1px solid rgba(243, 209, 190, 0.08);
+}
+
+.lifestyle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.lifestyle-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  background: rgba(243, 209, 190, 0.12);
+  border: 1px solid rgba(243, 209, 190, 0.25);
+  color: var(--peach-soft);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.lifestyle-lead {
+  margin-top: 18px;
+  font-size: 16px;
+  color: rgba(245, 242, 236, 0.78);
+  max-width: 480px;
+}
+
+.lifestyle-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 32px 0 36px;
+}
+
+.lifestyle-tab {
+  width: 100%;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(243, 209, 190, 0.14);
+  border-radius: 20px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--text-light);
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lifestyle-tab:hover {
+  background: rgba(243, 209, 190, 0.1);
+  border-color: rgba(243, 209, 190, 0.35);
+}
+
+.lifestyle-tab.is-active {
+  background: linear-gradient(135deg, rgba(243, 209, 190, 0.96), rgba(232, 174, 147, 0.92));
+  color: var(--text-dark);
+  border-color: transparent;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+}
+
+.lifestyle-tab__num {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.lifestyle-tab.is-active .lifestyle-tab__num {
+  background: var(--bg-dark);
+  color: var(--peach-soft);
+}
+
+.lifestyle-tab__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lifestyle-tab__text strong {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.lifestyle-tab__text span {
+  font-size: 13px;
+  opacity: 0.78;
+}
+
+.lifestyle-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lifestyle-stage__frame {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(243, 209, 190, 0.2);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+}
+
+.lifestyle-stage__img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+}
+
+.lifestyle-stage__glass {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  background: rgba(24, 18, 15, 0.78);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(243, 209, 190, 0.22);
+  border-radius: 20px;
+  padding: 18px 22px;
+  color: var(--text-light);
+}
+
+.lifestyle-stage__tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--peach-warm);
+  margin-bottom: 6px;
+}
+
+.lifestyle-stage__glass p {
+  font-size: 14px;
+  line-height: 1.45;
+  opacity: 0.92;
+}
+
+.lifestyle-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.lifestyle-thumb {
+  border: 2px solid transparent;
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: all 0.3s ease;
+}
+
+.lifestyle-thumb img {
+  width: 100%;
+  height: 92px;
+  object-fit: cover;
+  display: block;
+}
+
+.lifestyle-thumb.is-active,
+.lifestyle-thumb:hover {
+  opacity: 1;
+  border-color: var(--peach-warm);
+  transform: translateY(-2px);
+}
+
+/* 5. FAQ */
+.faq-wrap {
+  max-width: 840px;
+}
+
+.faq-list {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item {
+  background: #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 22px 28px;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-answer {
+  height: 0;
+  overflow: hidden;
+  padding: 0 28px;
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+.faq-answer p {
+  padding-bottom: 22px;
+}
+
+/* 6. ПОЛНОЦЕННЫЙ АРХИТЕКТУРНЫЙ ФУТЕР */
+.footer {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding: 72px 0 36px;
+  border-top-left-radius: var(--radius-section);
+  border-top-right-radius: var(--radius-section);
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(245, 242, 236, 0.12);
+}
+
+.footer__desc {
+  margin-top: 16px;
+  font-size: 14px;
+  opacity: 0.72;
+  max-width: 280px;
+}
+
+.footer__col h4,
+.footer__cta h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--peach-soft);
+  margin-bottom: 16px;
+}
+
+.footer__col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.footer__col a {
+  color: var(--text-light);
+  text-decoration: none;
+  opacity: 0.78;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.footer__col a:hover {
+  opacity: 1;
+  color: var(--peach-soft);
+}
+
+.footer__col span {
+  opacity: 0.65;
+}
+
+.footer__cta p {
+  font-size: 14px;
+  opacity: 0.78;
+  margin-bottom: 20px;
+}
+
+.footer__bottom {
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.footer__legal {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__legal a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+/* МОДАЛЬНОЕ ОКНО */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 23, 20, 0.78);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+.modal-backdrop[hidden] {
+  display: none;
+}
+
+.modal-card {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  max-width: 720px;
+  width: 100%;
+  padding: 36px;
+  border-radius: var(--radius-card);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-card h3 {
+  font-size: 26px;
+  margin: 14px 0 8px;
+}
+
+.modal-lead {
+  opacity: 0.8;
+  margin-bottom: 24px;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.modal-block {
+  background: #FFFFFF;
+  padding: 18px;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+.modal-block strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--terracotta);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(30, 23, 20, 0.12);
+}
+
+/* АДАПТИВ */
+@media (max-width: 960px) {
+  .about-grid, .formats-layout, .formats-grid, .teachers-grid, .lifestyle-grid, .quiz-form, .modal-grid, .footer__top {
+    grid-template-columns: 1fr;
+  }
+  .nav-pill { display: none; }
+  .teachers-header { flex-direction: column; align-items: flex-start; }
+  .teachers-map { width: 320px; max-width: 100%; margin-right: 0; margin-top: 24px; }
+  .footer__bottom, .modal-footer, .quiz-result { flex-direction: column; text-align: center; gap: 12px; }
+}
+
+/* Временный фикс для импорта всех секций в Figma (после переноса можно удалить) */
+.gsap-title, .gsap-pill, .gsap-manifest-card, .gsap-format-card,
+.gsap-quiz-box, .gsap-greece-map, .gsap-teacher-card,
+.gsap-lifestyle-main, .gsap-lifestyle-item {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
